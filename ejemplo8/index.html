@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<title>Inicio | Mi Página Web Responsiva</title>
+</head>
+<body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelector('.slides');
+    if (!slides) return;
+    let index = 0;
+    const totalSlides = document.querySelectorAll('.slide').length;
+    setInterval(() => {
+        index = (index + 1) % totalSlides;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+});
+</script>
+
+<header>
+	<h1>Mi pagina Web Responsiva</h1>
+	<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+	<nav id="navMenu">
+		<ul>
+			<li><a href="index.html" class="active">Inicio</a></li>
+			<li><a href="acerca.html">Acerca de</a></li>
+			<li><a href="servicios.html">Servicios</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="slider">
+	<div class="slides">
+		<div class="slide active">
+			<img src="img/slide1.jpg" alt="slide 1">
+		</div>
+		<div class="slide">
+			<img src="img/slide2.jpg" alt="slide 2">
+		</div>
+		<div class="slide">
+			<img src="img/slide3.jpg" alt="slide 3">
+		</div>
+	</div>
+</section>
+
+<div class="container">
+	<div class="main-content">
+		<div class="info-section">
+			<div class="info-text">
+				<h2>Bienvenido a mi Sitio Web Personal</h2>
+				<p>
+					Este es un espacio donde compartimos informacion, proyectos y servicios. 
+					Aqui puedes integrar contenido educativo, tecnologico o empresarial. 
+					El diseño es completamente responsivo y adaptable a cualquier celular.
+				</p>
+			</div>
+			<div class="info-image">
+				<img src="img/foto.jpg" alt="Imagen representativa">
+			</div>
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar-content">
+			<div class="video-section">
+				<h3>Video Destacado</h3>
+				<div class="video-container">
+					<iframe src="https://www.youtube.com/embed/mnnajImnSQk" title="Video destacado"
+					frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+					encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="info-sidebar">
+				<h3>Mira esto</h3>
+				<p>Nuestro sitio esta creado con HTML5, CSS3 y javaScript.
+				Es completamente responsivo y adaptable a dispositivos moviles.</p>
+				<ul>
+					<li>🔥 Diseño Moderno</li>
+					<li>🔥 Navegacion intuitiva</li>
+					<li>🔥 Codigo estructurado</li>
+					<li>🔥 Base lista para integrar</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>Derechos de autor &copy; | Dylan Ayuso</p>
+</footer>
+
+<script>
+function toggleMenu() {
+	const navMenu = document.getElementById("navMenu");
+	navMenu.classList.toggle("responsive");
+}
+</script>
+
+
+<div class="social-float">
+	<a href="https://facebook.com" target="_blank" title="Facebook">
+		<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+		</svg>
+	</a>
+	<a href="https://instagram.com" target="_blank" title="Instagram">
+		<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+		</svg>
+	</a>
+	<a href="https://youtube.com" target="_blank" title="YouTube">
+		<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+		</svg>
+	</a>
+</div>
+
+</body>
+</html>
